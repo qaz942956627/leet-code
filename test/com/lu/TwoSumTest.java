@@ -16,4 +16,9 @@ class TwoSumTest {
         assertArrayEquals(new int[]{1,4},twoSum1);
         assertArrayEquals(new int[]{0,6},twoSum2);
     }
+
+    @Test
+    void divide2Test() {
+        System.out.println(9/2);
+    }
 }

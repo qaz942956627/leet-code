@@ -2,6 +2,8 @@ package linkedlist;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class _206_反转链表Test {
@@ -16,7 +18,7 @@ class _206_反转链表Test {
 
         _206_反转链表 _206 = new _206_反转链表();
 
-        ListNode listNode = _206.reverseList2(node);
+        ListNode listNode = _206.reverseList(node);
         System.out.println(1);
 
     }
