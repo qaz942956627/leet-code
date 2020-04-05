@@ -6,7 +6,6 @@ package linkedlist;
  */
 public class _203_移除链表元素 {
     public ListNode removeElements(ListNode head, int val) {
-        new Thread()
 
         ListNode sentinel = new ListNode(0);
         sentinel.next = head;
