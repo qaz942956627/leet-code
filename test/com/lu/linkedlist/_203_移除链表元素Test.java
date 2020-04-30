@@ -1,8 +1,6 @@
-package linkedlist;
+package com.lu.linkedlist;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class _203_移除链表元素Test {
 

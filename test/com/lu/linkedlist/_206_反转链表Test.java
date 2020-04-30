@@ -1,10 +1,6 @@
-package linkedlist;
+package com.lu.linkedlist;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class _206_反转链表Test {
 
@@ -20,6 +16,10 @@ class _206_反转链表Test {
 
         ListNode listNode = _206.reverseList(node);
         System.out.println(1);
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(1111);
+        }
 
     }
 }

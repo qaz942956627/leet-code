@@ -1,4 +1,4 @@
-package linkedlist;
+package com.lu.linkedlist;
 
 public class Tmp {
     public boolean hasCycle(ListNode head) {

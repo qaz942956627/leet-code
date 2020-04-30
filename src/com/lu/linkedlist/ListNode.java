@@ -1,4 +1,4 @@
-package linkedlist;
+package com.lu.linkedlist;
 
 /**
  * @author 小卢
