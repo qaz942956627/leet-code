@@ -2,6 +2,10 @@ package com.lu;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TwoSumTest {
@@ -20,5 +24,26 @@ class TwoSumTest {
     @Test
     void divide2Test() {
         System.out.println(9/2);
+    }
+
+    @Test
+    void tests22() {
+        List<Integer> s = new ArrayList<>();
+        s.add(0);
+        s.add(01);
+        s.add(02);
+        s.add(03);
+        s.add(04);
+        List<Integer> collect = s.stream().filter(s1 -> s1.equals(9)).map(i -> {
+
+            return i / 0;
+        }).collect(Collectors.toList());
+        System.out.println(collect);
+    }
+
+    @Test
+    void me() {
+        String s = "sssssE001";
+        System.out.println(s.substring(s.length()-4));
     }
 }
