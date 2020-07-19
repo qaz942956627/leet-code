@@ -46,4 +46,14 @@ class TwoSumTest {
         String s = "sssssE001";
         System.out.println(s.substring(s.length()-4));
     }
+
+    @Test
+    void subStringTest() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(123456);
+        //获取倒数第二个元素的值
+        String value = sb.substring(sb.length() - 2, sb.length() - 1);
+        //获取连续出现的次数
+        String lastCount = sb.substring(sb.length() - 1, sb.length());
+    }
 }
