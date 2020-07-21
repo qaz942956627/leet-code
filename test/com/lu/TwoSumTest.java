@@ -56,4 +56,33 @@ class TwoSumTest {
         //获取连续出现的次数
         String lastCount = sb.substring(sb.length() - 1, sb.length());
     }
+
+    @Test
+    void plusOne() {
+        int[] ints = {9, 9};
+        plusOne1(ints);
+    }
+
+    public static int[] plusOne1(int[] digits) {
+        for (int i = digits.length - 1; i >= 0; i--) {
+            digits[i]++;
+            digits[i] = digits[i] % 10;
+            if (digits[i] != 0) {
+                return digits;
+            }
+        }
+        digits = new int[digits.length + 1];
+        digits[0] = 1;
+        return digits;
+    }
+
+    @Test
+    void charAdd() {
+
+        int i = '1' - 1;
+        int i1 = '0' - '0';
+        System.out.println(i);
+        System.out.println(i1);
+
+    }
 }
