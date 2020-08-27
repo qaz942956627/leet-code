@@ -3,6 +3,8 @@ package com.lu;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -83,6 +85,19 @@ class TwoSumTest {
         int i1 = '0' - '0';
         System.out.println(i);
         System.out.println(i1);
+
+    }
+
+    @Test
+    void stackTest() {
+        Deque<Integer> stack = new LinkedList<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        System.out.println(stack.peek());
+        System.out.println(stack.poll());
+        System.out.println(stack.peek());
 
     }
 }
