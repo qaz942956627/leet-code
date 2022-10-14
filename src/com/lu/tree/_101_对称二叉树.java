@@ -14,5 +14,6 @@ public class _101_对称二叉树 {
         } else {
             return false;
         }
+        return false;
     }
 }
