@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution20 {
     public boolean isValid(String s) {
 
         Deque<Character> stack = new LinkedList<>();
