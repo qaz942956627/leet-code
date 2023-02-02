@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution392 {
     public boolean isSubsequence(String s, String t) {
         int sLength = s.length();
         int tLength = t.length();
@@ -33,7 +33,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().isSubsequence("bcd", "uuubcd"));
+        // System.out.println(new Solution().isSubsequence("bcd", "uuubcd"));
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

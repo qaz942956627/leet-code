@@ -1,0 +1,30 @@
+### 解题思路
+
+dp数组代表所花最小费用，i代表每次爬的楼梯
+初始化dp[1]=cost[0],dp[2]=cost[1]
+从i==3开始，每次取从i-1和i-2来的最小值，然后再加上本身花费
+若爬到最上面一层，则不需要花费
+
+### 代码
+
+* cpp
+
+```cpp
+class Solution {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        int dp[1100]={0};
+        int n=cost.size();
+        //cout<<n;
+        dp[1]=cost[0],dp[2]=cost[1];
+        for(int i=3;i<=n+1;i++){
+            if(i<=n)
+                dp[i]=min(dp[i-1],dp[i-2])+cost[i-1];
+            else
+                dp[i]=min(dp[i-1],dp[i-2]);
+        }
+        return dp[n+1];
+    }
+};
+```
+
