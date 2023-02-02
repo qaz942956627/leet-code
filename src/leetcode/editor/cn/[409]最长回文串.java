@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution450 {
+class Solution409 {
     public int longestPalindrome(String s) {
         int[] count = new int[128];
         int length = s.length();
