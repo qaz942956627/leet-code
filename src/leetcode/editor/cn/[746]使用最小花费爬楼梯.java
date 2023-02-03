@@ -1,7 +1,7 @@
 package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution764 {
 
     public int minCostClimbingStairs(int[] cost) {
         int n = cost.length;
@@ -19,8 +19,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.minCostClimbingStairs(new int[]{10, 15, 20}));
+        // Solution solution = new Solution();
+        // System.out.println(solution.minCostClimbingStairs(new int[]{10, 15, 20}));
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
