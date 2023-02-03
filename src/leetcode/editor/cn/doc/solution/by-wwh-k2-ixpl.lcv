@@ -1,0 +1,56 @@
+### 解题思路
+
+### 代码
+
+* java
+
+```java
+class Solution {
+     private String[] allnums = {"1","2","4","8","01","02","04","08","16","32"};
+    private List<String> allString = new ArrayList<>();
+    private List<String> singleString = new ArrayList<>();
+    public List<String> readBinaryWatch(int turnedOn) {
+        if (turnedOn <0){
+            return allString;
+        }
+        DFS(turnedOn,0);
+        return allString;
+    }
+
+    private void DFS(int turnedOn,int StartInedx) {
+        if (turnedOn == 0){
+            if (Tohour() == ""){
+                return;
+            }
+            allString.add(Tohour());
+            return;
+        }
+        for (int i = StartInedx; i < allnums.length; i++) {
+            singleString.add(allnums[i]);
+            DFS(turnedOn-1,i+1);
+            singleString.remove(singleString.size()-1);
+        }
+    }
+
+    private String Tohour(){
+        int hour = 0;
+        int min = 0;
+        for (String s : singleString) {
+            if (s.length()==1){
+                hour+=Integer.parseInt(s);
+                 if (hour>=12){
+                    return "";
+                }
+            }else {
+                min+=Integer.parseInt(s);
+                if (min>=60){
+                    return "";
+                }
+            }
+        }
+        return String.valueOf(hour)+":"+(min<10?"0"+String.valueOf(min):String.valueOf(min));
+    }
+
+}
+```
+
