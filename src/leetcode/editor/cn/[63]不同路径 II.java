@@ -3,7 +3,7 @@ package leetcode.editor.cn;
 import java.util.Arrays;
 
 // leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution63 {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
 
         int m = obstacleGrid.length;
