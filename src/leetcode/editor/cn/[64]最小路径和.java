@@ -1,7 +1,7 @@
 package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution64 {
 
     int[][] dp;
     public int minPathSum(int[][] grid) {
@@ -64,7 +64,7 @@ class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         // solution.minPathSum(new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
-        solution.minPathSum(new int[][]{{1, 2}, {5, 6}, {1, 1}});
+        // solution.minPathSum(new int[][]{{1, 2}, {5, 6}, {1, 1}});
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
