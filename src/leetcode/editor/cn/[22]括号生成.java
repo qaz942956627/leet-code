@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution {
+class Solution22 {
 
     List<String> res;
 
@@ -102,8 +102,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.generateParenthesis(3));
+        // Solution solution = new Solution();
+        // System.out.println(solution.generateParenthesis(3));
     }
 }
 // leetcode submit region end(Prohibit modification and deletion)
