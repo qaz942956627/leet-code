@@ -19,9 +19,8 @@ import java.util.*;
  *     }
  * }
  */
-class Solution102 {
-    public List<List<Integer>> levelOrder(TreeNode root) {
-
+class Solution103 {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root==null) {
             return res;
@@ -30,23 +29,33 @@ class Solution102 {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
+        boolean flag = true;
+
         while (!queue.isEmpty()) {
-            List<Integer> level = new ArrayList<>();
+            LinkedList<Integer> level = new LinkedList<>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode treeNode = queue.poll();
-                level.add(treeNode.val);
+                if (flag) {
+                    level.addLast(treeNode.val);
+                } else {
+                    level.addFirst(treeNode.val);
+                }
+
                 if (treeNode.left != null) {
                     queue.add(treeNode.left);
                 }
                 if (treeNode.right != null) {
                     queue.add(treeNode.right);
                 }
+
             }
+            flag = !flag;
             res.add(level);
 
         }
         return res;
+
     }
 
     public static void main(String[] args) {
@@ -56,7 +65,7 @@ class Solution102 {
         // treeNode.right = new TreeNode(20);
         // treeNode.right.left = new TreeNode(15);
         // treeNode.right.right = new TreeNode(7);
-        // solution.levelOrder(treeNode);
+        // solution.zigzagLevelOrder(treeNode);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
