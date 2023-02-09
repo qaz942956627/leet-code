@@ -40,12 +40,12 @@ class Solution94 {
     }
 
     public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode(2);
-        treeNode.left = new TreeNode(1);
-        treeNode.right = new TreeNode(3);
-        Solution solution = new Solution();
-
-        System.out.println(solution.inorderTraversal(treeNode));
+        // TreeNode treeNode = new TreeNode(2);
+        // treeNode.left = new TreeNode(1);
+        // treeNode.right = new TreeNode(3);
+        // Solution solution = new Solution();
+        //
+        // System.out.println(solution.inorderTraversal(treeNode));
 
     }
 }
