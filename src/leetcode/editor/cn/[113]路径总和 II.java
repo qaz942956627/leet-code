@@ -20,7 +20,7 @@ import java.util.List;
  *     }
  * }
  */
-class Solution {
+class Solution113 {
 
     int sum = 0;
 
