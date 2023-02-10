@@ -25,18 +25,19 @@ class Solution94 {
     List<Integer> res = new ArrayList<>();
 
     public List<Integer> inorderTraversal(TreeNode root) {
+        traverse(root);
+        return res;
+    }
 
-
-
-        if (root != null) {
-            inorderTraversal(root.left);
-            res.add(root.val);
-            inorderTraversal(root.right);
+    void traverse(TreeNode root) {
+        if (root==null) {
+            return;
         }
 
+        traverse(root.left);
+        res.add(root.val);
+        traverse(root.right);
 
-
-        return res;
     }
 
     public static void main(String[] args) {

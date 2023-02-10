@@ -16,7 +16,7 @@ package leetcode.editor.cn;
  * }
  * }
  */
-class Solution {
+class Solution110 {
 
     boolean res = true;
 
