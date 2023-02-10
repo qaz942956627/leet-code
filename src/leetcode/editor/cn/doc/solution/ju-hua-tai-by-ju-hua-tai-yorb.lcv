@@ -1,0 +1,64 @@
+### 解题思路
+
+首先找到当前的根节点，构建根节点之后，对左右链表分别递归即可。
+注意这里有个小细节，用一个哑巴节点作为pre,pre在low前面，当low指向根节点之后跳出循环，这样可以把pre.next 设置为null，
+这样就可以统一所有操作。
+
+### 代码
+
+* java
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode sortedListToBST(ListNode head) {
+        return dfs(head);
+    }
+
+    public TreeNode dfs(ListNode head) {
+        if(head == null)
+            return null;
+        if(head.next == null)
+            return new TreeNode(head.val);
+        ListNode pre = new ListNode();
+        pre.next = head;
+        ListNode low = head, fast = head;
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            low = low.next;
+            pre = pre.next;
+        }
+        pre.next = null;
+        TreeNode root = new TreeNode(low.val);
+        root.right = dfs(low.next);
+        root.left = dfs(head);
+        return root;
+    }
+
+}
+```
+
