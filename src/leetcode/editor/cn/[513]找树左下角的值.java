@@ -2,7 +2,8 @@ package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Definition for a binary tree node.
@@ -19,58 +20,63 @@ import java.util.*;
  *     }
  * }
  */
-class Solution111 {
+class Solution513 {
 
-    int minDepth = Integer.MAX_VALUE;
     int depth = 0;
+    int maxDepth = 0;
+
+    int res = 0;
+
 
     /**
-     * 递归解法 在进入子节点的时候深度+1 在离开节点的时候深度-1
-     * 在离开叶子节点的时候判断最小深度
+     * dfs
      *
      * @param root 根
      * @return int
      */
-    public int minDepth(TreeNode root) {
-        if (root==null) {
-            return 0;
-        }
+    public int findBottomLeftValue(TreeNode root) {
 
         traverse(root);
-
-        return minDepth;
+        return res;
     }
 
     void traverse(TreeNode root) {
-        if (root==null) {
+        if (root == null) {
             return;
         }
         depth++;
+        if (depth>maxDepth) {
+            maxDepth = depth;
+            res = root.val;
+        }
         traverse(root.left);
         traverse(root.right);
-        // 如果离开的是一个根节点 那么更新一下最小深度
-        if (root.left == null && root.right == null) {
-            minDepth = Math.min(minDepth, depth);
-        }
         depth--;
     }
 
-    public int minDepth1(TreeNode root) {
+    /**
+     * BFS
+     *
+     * @param root 根
+     * @return int
+     */
+    public int findBottomLeftValueBfs(TreeNode root) {
+        int res = 0;
+
         if (root==null) {
-            return 0;
+            return res;
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
 
-        int depth = 1;
+        queue.offer(root);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if (node.left==null&& node.right==null) {
-                    return depth;
+                if (i==0) {
+                    res = node.val;
                 }
                 if (node.left != null) {
                     queue.offer(node.left);
@@ -79,23 +85,9 @@ class Solution111 {
                     queue.offer(node.right);
                 }
             }
-            depth++;
         }
+        return res;
 
-        return depth;
     }
-
-    public static void main(String[] args) {
-        // Solution solution = new Solution();
-        // TreeNode treeNode = new TreeNode(2);
-        // treeNode.right = new TreeNode(3);
-        // treeNode.right.right = new TreeNode(4);
-        // treeNode.right.right.right = new TreeNode(5);
-        // treeNode.right.right.right.right = new TreeNode(6);
-        // solution.minDepth(treeNode);
-    }
-
-
-
 }
 //leetcode submit region end(Prohibit modification and deletion)
