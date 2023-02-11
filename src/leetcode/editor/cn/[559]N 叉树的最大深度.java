@@ -25,7 +25,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-class Solution {
+class Solution559 {
 
     int depth = 0;
 
@@ -47,13 +47,13 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Node node = new Node(1);
-        Node node3 = new Node(3);
-        node3.children = Arrays.asList(new Node(5), new Node(6));
-        node.children = Arrays.asList(node3, new Node(2), new Node(4));
-
-        Solution solution = new Solution();
-        System.out.println(solution.maxDepth(node));
+//        Node node = new Node(1);
+//        Node node3 = new Node(3);
+//        node3.children = Arrays.asList(new Node(5), new Node(6));
+//        node.children = Arrays.asList(node3, new Node(2), new Node(4));
+//
+//        Solution solution = new Solution();
+//        System.out.println(solution.maxDepth(node));
 
     }
     public int maxDepth1(Node root) {
