@@ -1,7 +1,5 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.cn.printer.BinaryTrees;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
