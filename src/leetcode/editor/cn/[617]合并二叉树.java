@@ -16,7 +16,7 @@ package leetcode.editor.cn;
  *     }
  * }
  */
-class Solution {
+class Solution617 {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
         if (root1 == null) {
             return root2;
