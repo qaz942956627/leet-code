@@ -4,8 +4,8 @@ import leetcode.editor.cn.printer.BinaryTrees;
 import leetcode.editor.cn.printer.PrintTreeNode;
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Definition for a binary tree node.
@@ -22,8 +22,11 @@ import java.util.Queue;
  *     }
  * }
  */
-class Solution {
+class Solution98 {
     public boolean isValidBST(TreeNode root) {
+
+        List<Integer> list = new ArrayList<>();
+
         return isValidBST(root, null, null);
     }
 
