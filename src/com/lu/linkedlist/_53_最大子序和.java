@@ -1,10 +1,5 @@
 package com.lu.linkedlist;
 
-import com.sun.istack.internal.NotNull;
-
-import java.util.LinkedList;
-import java.util.List;
-
 public class _53_最大子序和 {
 
     /**

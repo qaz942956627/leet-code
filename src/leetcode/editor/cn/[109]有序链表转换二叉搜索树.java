@@ -35,7 +35,7 @@ import java.util.Queue;
  *     }
  * }
  */
-class Solution {
+class Solution109 {
     public TreeNode sortedListToBST(ListNode head) {
 
         List<Integer> list = new ArrayList<>();
@@ -74,8 +74,8 @@ class Solution {
         head.next.next.next = new ListNode(5);
         head.next.next.next.next = new ListNode(9);
 
-        Solution solution = new Solution();
-        TreeNode treeNode = solution.sortedListToBST(head);
+//        Solution solution = new Solution();
+//        TreeNode treeNode = solution.sortedListToBST(head);
         //BinaryTrees.println(treeNode);
 
     }

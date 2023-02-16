@@ -1,0 +1,32 @@
+### 解题思路
+
+DFS+回溯，与以往DFS不同的是，一轮中把走过的点清除但是到下一轮循环之前要恢复原来的值即回溯
+
+### 代码
+
+* python3
+
+```python
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        m,n = len(board),len(board[0])
+        def dfs(i,j,k):
+            # 递归出口：超出边界、当前值不同
+            if i < 0 or i >= m or j < 0 or j >= n or board[i][j] != word[k]:
+                return False
+            if k == len(word) - 1:
+                return True
+            board[i][j] = '' # 把这轮走过的点清除避免重复
+            # 递归上下左右，并且连续正确的长度+1,res代表是否成功的标记
+            res = dfs(i+1,j,k+1) or dfs(i-1,j,k+1) or dfs(i,j+1,k+1) or dfs(i,j-1,k+1)
+            # 回溯，表示在下一轮循环中还需要原来的标记
+            board[i][j] = word[k]
+            return res
+        for i in range(m):
+            for j in range(n):
+                # 如果dfs返回true则存在，k表示连续正确的长度
+                if dfs(i,j,0):
+                    return True
+        return False
+```
+
