@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution12 {
+class SolutionJ12 {
     public boolean exist(char[][] board, String word) {
 
         char[] wordArray = word.toCharArray();
@@ -83,11 +83,11 @@ class Solution12 {
     public static void main(String[] args) {
 
 
-//        char[][] strings = JSONObject.parseObject("""
-//                        [["C","A","A"],["A","A","A"],["B","C","D"]]
-//                        """,
-//                new TypeReference<>() {
-//                });
+        int[][] strings = JSONObject.parseObject("""
+                        [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]]
+                        """,
+                new TypeReference<>() {
+                });
 //        System.out.println(Arrays.deepToString(strings));
 //
 //        Solution solution = new Solution();
