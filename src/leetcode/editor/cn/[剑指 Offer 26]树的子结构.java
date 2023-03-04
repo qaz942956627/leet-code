@@ -11,7 +11,7 @@ package leetcode.editor.cn;
  * TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class SolutionJ26 {
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {
         if (A == null || B == null) {
