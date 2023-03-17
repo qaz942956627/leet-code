@@ -1,0 +1,21 @@
+### 核心代码
+
+* 
+
+```
+    static void dfs(TreeNode root, int target, LinkedList<Integer> path, List<List<Integer>> res) {
+        if (root == null) return;
+        path.add(root.val);//根节点的值加入路径
+        target -= root.val;//计算出target还需要满足多少
+        if (target == 0 && root.left == null && root.right == null) {
+            res.add(new LinkedList<>(path));
+        }//如果target为0，且左右子树都为空，说明找到了一条路径
+        dfs(root.left, target, path, res);//左子树作为根节点，继续寻找
+
+// 如果root.left为空，这个函数就会直接返回，不会执行下面的语句，也是递归的终止条件
+
+        dfs(root.right, target, path, res);
+        path.removeLast();//removeLast()方法是LinkedList自带的方法，用于删除最后一个元素。
+    }
+```
+
