@@ -21,7 +21,7 @@ import java.util.List;
  *     }
  * }
  */
-class Solution {
+class SolutionJ34 {
 
     int target;
 
