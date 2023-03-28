@@ -19,8 +19,8 @@ class SolutionJ088 {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.minCostClimbingStairs(new int[]{10, 15, 20});
+        // Solution solution = new Solution();
+        // solution.minCostClimbingStairs(new int[]{10, 15, 20});
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
