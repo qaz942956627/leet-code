@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class SolutionJ53 {
+class SolutionJ53_1 {
     int iLength;
     int jLength;
     public int[][] updateMatrix(int[][] mat) {

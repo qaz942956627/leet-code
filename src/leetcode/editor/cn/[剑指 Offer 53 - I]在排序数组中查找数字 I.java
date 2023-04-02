@@ -1,7 +1,7 @@
 package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class SolutionJ53 {
     public int search(int[] nums, int target) {
 
         int left = 0;
@@ -41,8 +41,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.search(new int[]{5, 7, 7, 8, 8, 10}, 8);
+//        Solution solution = new Solution();
+//        solution.search(new int[]{5, 7, 7, 8, 8, 10}, 8);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
