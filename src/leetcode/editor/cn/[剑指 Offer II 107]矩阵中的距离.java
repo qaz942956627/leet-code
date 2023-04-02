@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class SolutionJ53 {
     int iLength;
     int jLength;
     public int[][] updateMatrix(int[][] mat) {
@@ -69,8 +69,8 @@ class Solution {
 
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.updateMatrix(new int[][]{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}});
+//        Solution solution = new Solution();
+//        solution.updateMatrix(new int[][]{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}});
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
