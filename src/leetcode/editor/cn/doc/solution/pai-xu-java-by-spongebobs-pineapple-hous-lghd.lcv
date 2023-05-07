@@ -1,0 +1,24 @@
+第一道入门贪心的题目
+能够找到所谓的局部最优，小饼干满足小胃口，大饼干满足大胃口，这个就是局部的一个优解，或者说是大饼干满足大胃口，也是一种方案。
+![图片.png](https://pic.leetcode.cn/1673866918-IQrmBv-%E5%9B%BE%E7%89%87.png)
+
+* 
+
+```
+    public int findContentChildren(int[] g, int[] s) {
+        //通过排序 找到我们的局部最优的解法
+        //小饼干满足小胃口 大饼干满足大胃口
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int index = 0;
+        //这个方法就是优先考虑我们的小胃口 如果我们的当前的饼干大小刚好可以满足我们的最小的孩子我们就可以继续看下一个孩子
+        for (int i = 0; i < s.length; i++) {
+            if (index < g.length && g[index] <= s[i]) {
+                index++;
+            }
+        }
+        return index;
+    }
+
+```
+
