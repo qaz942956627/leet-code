@@ -29,4 +29,15 @@ public class ListNode {
         return dummy.next;
 
     }
+
+    public static ListNode build(Integer[] nodeValues) {
+        ListNode dummy = new ListNode();
+        ListNode cur = dummy;
+        for (Integer nodeValue : nodeValues) {
+            cur.next = new ListNode(nodeValue);
+            cur = cur.next;
+        }
+        return dummy.next;
+
+    }
 }

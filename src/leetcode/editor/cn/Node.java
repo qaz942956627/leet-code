@@ -5,6 +5,8 @@ import java.util.List;
 class Node {
     public int val;
     Node next;
+    Node left;
+    Node right;
     Node random;
 
     public Node(int val) {
