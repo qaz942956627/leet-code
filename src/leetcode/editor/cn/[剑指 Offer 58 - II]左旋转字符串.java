@@ -1,11 +1,10 @@
 package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution70 {
-    public int climbStairs(int n) {
+class Solution058_2 {
+    public String reverseLeftWords(String s, int n) {
 
-        return ;
-
+        return s.substring(n) + s.substring(0, n);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

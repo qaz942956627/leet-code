@@ -1,11 +1,10 @@
 package leetcode.editor.cn;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution70 {
-    public int climbStairs(int n) {
+class Solution65 {
+    public int add(int a, int b) {
 
-        return ;
-
+        return 0;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -1,0 +1,48 @@
+    执行耗时:1 ms,击败了100.00% 的Java用户
+    内存消耗:40.3 MB,击败了80.03% 的Java用户
+
+未读取到数字时，只允许' '字符跳过，`'+'，'-'号出现即算读取到数字`。
+开始读取数字之后，只要字符不在0-9之间，即停止。
+使用三个变量标记开始、结束、正负数，循环即可。
+代码如下
+
+* java[]
+
+```java[]
+public static int myAtoi(String s) {
+        long result = 0L;
+        //三个标记字段
+        boolean stop = false, begin = false，thenZero = true;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) >= 48 && s.charAt(i) <= 57 && !stop) {
+                begin = true;
+                if (thenZero) {
+                    result = result * 10 + (s.charAt(i) - 48);
+                } else {
+                    result = result * 10 - (s.charAt(i) - 48);
+                }
+                if (result > Integer.MAX_VALUE) {
+                    return Integer.MAX_VALUE;
+                } else if (result < Integer.MIN_VALUE) {
+                    return Integer.MIN_VALUE;
+                }
+            } else if (s.charAt(i) == '+' && !begin) {
+                // +-号只允许出现一次
+                begin = true;
+                thenZero = true;
+            } else if (s.charAt(i) == '-' && !begin) {
+                // +-号只允许出现一次
+                begin = true;
+                thenZero = false;
+            } else if (s.charAt(i) == ' ' && !begin) {
+                continue;
+            } else {
+                //开始之后出现任何非0-9之间的字符即结束
+                stop = true;
+            }
+        }
+        return (int) result;
+    }
+```
+
