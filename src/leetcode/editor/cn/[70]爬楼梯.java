@@ -4,7 +4,7 @@ package leetcode.editor.cn;
 class Solution70 {
     public int climbStairs(int n) {
 
-        return ;
+        return 0;
 
     }
 }

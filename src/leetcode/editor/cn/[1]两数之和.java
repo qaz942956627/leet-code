@@ -28,21 +28,7 @@ class Solution1 {
 
         return null;
     }
-    public int[] twoSum1(int[] nums, int target) {
 
-        int[] res = new int[2];
-        Map<Integer, Integer> map = new HashMap<>();
-
-        int length = nums.length;
-        for (int i = 0; i < length; i++) {
-            int num = nums[i];
-            if (map.containsKey(num)) {
-                return new int[]{i, map.get(num)};
-            }
-            map.put(target - num, i);
-        }
-        return res;
-    }
 
     public static void main(String[] args) {
         // new Solution().twoSum(new int[]{2, 7, 11, 15}, 9);
